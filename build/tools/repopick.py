@@ -198,11 +198,6 @@ def is_lineage_gerrit(remote_url):
     p = urllib.parse.urlparse(remote_url)
     return p.hostname == "review.lineageos.org"
 
-def is_pixelos_gerrit(remote_url):
-    p = urllib.parse.urlparse(remote_url)
-    return p.hostname == "review.pixelos.net"
-
-
 def commit_exists(project_path, revision):
     return (
         subprocess.call(
@@ -220,7 +215,7 @@ def main():
         description=textwrap.dedent(
             """\
         repopick.py is a utility to simplify the process of cherry picking
-        patches from PixelOS's Gerrit instance (or any gerrit instance of your choosing)
+        patches from PixelLinese Gerrit instance (or any gerrit instance of your choosing)
 
         Given a list of change numbers, repopick will cd into the project path
         and cherry pick the latest patch available.
@@ -306,7 +301,7 @@ def main():
     parser.add_argument(
         "-g",
         "--gerrit",
-        default="https://review.pixelos.net",
+        default="",
         metavar="",
         help="Gerrit Instance to use. Form proto://[user@]host[:port]",
     )
@@ -661,7 +656,7 @@ def do_git_fetch_pull(args, item):
     cmd.extend(["", item["fetch"][method]["ref"]])
 
     # Try fetching from GitHub first if using lineage gerrit
-    if is_lineage_gerrit(args.gerrit) or is_pixelos_gerrit(args.gerrit):
+    if is_lineage_gerrit(args.gerrit) or is_pixellinese_gerrit(args.gerrit):
         if args.verbose:
             print("Trying to fetch the change from GitHub")
 
