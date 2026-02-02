@@ -1,4 +1,4 @@
-function __print_pixelos_functions_help() {
+function __print_pixellines_functions_help() {
 cat <<EOF
 Additional PixelOS functions:
 - brunch:          Runs "breakfast" and "mka bacon" for the provided device target.
@@ -9,9 +9,9 @@ Additional PixelOS functions:
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
-- pixelosgerrit:   A Git wrapper that fetches/pushes patch from/to PixelOS Gerrit Review.
-- pixelosrebase:   Rebase a Gerrit change and push it again.
-- pixelosremote:   Add git remote for PixelOS Gerrit Review.
+- pixellinesgerrit:   A Git wrapper that fetches/pushes patch from/to PixelLines Gerrit Review.
+- pixellinesrebase:   Rebase a Gerrit change and push it again.
+- pixellinesremote:   Add git remote for PixelOS Gerrit Review.
 - aospremote:      Add git remote for matching AOSP repository.
 - cloremote:       Add git remote for matching CodeLinaro repository.
 - githubremote:    Add git remote for PixelOS Github.
