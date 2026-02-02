@@ -1,5 +1,5 @@
 prebuilt_media {
-    name: "bootanimation_pixelos",
+    name: "bootanimation_pixellines",
     filename: "bootanimation.zip",
     product_specific: true,
     src: select(soong_config_variable("vendor_custom", "bootanimation_res"), {
