@@ -13,8 +13,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.custom.version=PixelLines$(CUSTOM_VERSION)
 
 # Updater
-ifeq ($(IS_OFFICIAL),true)
-    PRODUCT_PRODUCT_PROPERTIES += \
-        net.pixellines.build_type=ci \
-        net.pixellines.version=$(CUSTOM_VERSION_PROP)
-endif
+PRODUCT_PRODUCT_PROPERTIES += \
+    net.pixellines.build_type=official \
+    net.pixellines.version=$(CUSTOM_VERSION_PROP)
