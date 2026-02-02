@@ -1,10 +1,10 @@
-WITH_GMS := true
+WITH_GMS := false
 
 # Pixel Clocks
 $(call inherit-product, vendor/pixel/clocks/products/clocks.mk)
 
 # Pixel GMS
-$(call inherit-product, vendor/pixel/gms/products/gms.mk)
+# $(call inherit-product, vendor/pixel/gms/products/gms.mk)
 
 # Pixel GSans
 $(call inherit-product, vendor/pixel/gsans/products/gsans.mk)
