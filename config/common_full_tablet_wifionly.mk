@@ -5,5 +5,5 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 TARGET_IS_TABLET := true
 WITH_GMS_COMMS_SUITE := false
 
-# Inherit some common PixelOS stuff.
+# Inherit some common PixelLines stuff.
 $(call inherit-product, vendor/custom/config/common.mk)
