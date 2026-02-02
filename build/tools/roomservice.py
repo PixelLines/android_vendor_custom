@@ -44,13 +44,6 @@ try:
 except:
     device = product
 
-if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from PixelOS-Devices Github (http://github.com/PixelOS-Devices)." % device)
-
-repositories = []
-
-if not depsonly:
-    api_url = "https://api.github.com/orgs/PixelOS-Devices/repos?per_page=100"
     try:
         with urllib.request.urlopen(api_url, timeout=10) as response:
             repos_json = json.loads(response.read().decode())
@@ -171,16 +164,6 @@ def add_to_manifest(repositories):
     except:
         lm = ElementTree.Element("manifest")
 
-    for repository in repositories:
-        repo_name = repository['repository']
-        repo_target = repository['target_path']
-        repo_revision = repository['branch']
-        repo_remote = repository.get('remote', 'github')
-        print('Checking if %s is fetched from %s' % (repo_target, repo_name))
-        if is_in_manifest(repo_target):
-            print('PixelOS-Devices/%s already fetched to %s' % (repo_name, repo_target))
-            continue
-
         project = ElementTree.Element("project", attrib = {
             "path": repo_target,
             "remote": repo_remote,
@@ -268,10 +251,7 @@ else:
                 # a current branch set up.
                 # Continue looking up all repositories until a match is found or no repos are left
                 # to check.
-                continue
-
-            device_repository = {'repository':'PixelOS-Devices/' + repo_name,'target_path':repo_path,'branch':revision}
-            add_to_manifest([device_repository])
+                continue)
 
             print("Syncing repository to retrieve project.")
             os.system('repo sync --force-sync %s' % repo_path)
@@ -280,5 +260,3 @@ else:
             fetch_dependencies(repo_path)
             print("Done")
             sys.exit()
-
-print("Repository for %s not found in the PixelOS-Devices Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
