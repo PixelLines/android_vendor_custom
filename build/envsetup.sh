@@ -29,7 +29,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
-        mka pixelos
+        mka pixellinese
     else
         echo "No such item in brunch menu. Try 'breakfast'"
         return 1
@@ -51,7 +51,7 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the PixelOS model name
+            # This is probably just the PixelLines model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
@@ -67,7 +67,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/PixelOS_*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/PixelLines_*.zip | tail -1`
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
