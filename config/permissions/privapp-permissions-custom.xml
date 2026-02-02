@@ -2,12 +2,13 @@
 
 <!--
      SPDX-FileCopyrightText: 2025 PixelOS
+     SPDX-FileCopyrightText: 2026 PixelLines (modifications)
      SPDX-License-Identifier: Apache-2.0
 -->
 
 <permissions>
 
-    <privapp-permissions package="net.pixelos.ota">
+    <privapp-permissions package="net.pixellines.ota">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM" />
         <permission name="android.permission.ACCESS_NETWORK_STATE" />
         <permission name="android.permission.FOREGROUND_SERVICE" />
