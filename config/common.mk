@@ -1,4 +1,4 @@
-# Common PixelOS stuff.
+# Common PixelLines stuff.
 
 # Bootanimation
 ifeq ($(strip $(TARGET_SCREEN_WIDTH)),)
@@ -8,7 +8,7 @@ else
 endif
 
 PRODUCT_PACKAGES += \
-    bootanimation_pixelos
+    bootanimation_pixellines
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
