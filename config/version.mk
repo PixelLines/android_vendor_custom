@@ -14,5 +14,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Updater
 PRODUCT_PRODUCT_PROPERTIES += \
-    net.pixellines.build_type=official \
+    net.pixellines.build_type=Official \
     net.pixellines.version=$(CUSTOM_VERSION_PROP)
