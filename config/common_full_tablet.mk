@@ -4,5 +4,5 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 # Define tablet-specific variables
 TARGET_IS_TABLET := true
 
-# Inherit some common PixelOS stuff.
+# Inherit some common PixelLines stuff.
 $(call inherit-product, vendor/custom/config/common.mk)
