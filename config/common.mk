@@ -49,8 +49,5 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayCustom \
     SettingsOverlayCustom
 
-# Updater
-include vendor/custom/config/ota.mk
-
 # Version
 include vendor/custom/config/version.mk
