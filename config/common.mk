@@ -38,7 +38,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.face.sense_service=true
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml \
+    vendor/custom/config/permissions/default_permissions_co.aospa.sense.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default_permissions_co.aospa.sense.xml \
+    vendor/custom/config/permissions/hiddenapi-whitelist-co.aospa.sense.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-whitelist-co.aospa.sense.xml \
+    vendor/custom/config/permissions/privapp_whitelist_co.aospa.sense.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_co.aospa.sense.xml
 endif
 
 # GMS
