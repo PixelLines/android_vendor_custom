@@ -1,0 +1,12 @@
+//
+// SPDX-FileCopyrightText: PixelOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+aconfig_values {
+    name: "aconfig-values-custom-cp2a-android.provider-all",
+    package: "android.provider",
+    srcs: [
+        "*_flag_values.textproto",
+    ],
+}
